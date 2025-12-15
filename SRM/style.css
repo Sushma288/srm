@@ -1,0 +1,258 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+    color: #184118;
+    animation: fadeIn 1s ease-in;
+}
+
+/* Fade-in animation for whole page */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Header */
+header {
+    background-color: #0b7a19;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+header .logo h1 {
+    font-size: 48px;
+    margin: 0;
+    font-weight: bold;
+}
+
+header .logo p {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+/* Main Layout (Grid) */
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1300px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* UL container */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Card (LI) */
+.feature-list li {
+    background: white;
+    padding: 40px 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+
+    /* Animation */
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 0.8s ease forwards;
+}
+
+/* Slide-up card animation */
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Hover Effect (Zoom + Glow) */
+.feature-list li:hover {
+    transform: translateY(-10px) scale(1.03);
+    transition: 0.3s ease;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+}
+
+/* Card Titles */
+.feature-list h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+    color: #0b7a19;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Title Hover Color Change */
+.feature-list li:hover h2 {
+    color: #065c12;
+}
+
+/* Card Text */
+.feature-list p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Make the Supplier Management heading link green */
+.feature-list h2 a {
+    color: #0b7a19 !important;
+    text-decoration: none;
+}
+
+/* Hover effect for heading link */
+.feature-list li:hover h2 a {
+    color: #065c12 !important;
+}
+
+
+/* Dropdown list hidden */
+.dropdown {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+/* Dropdown items styling */
+.dropdown li {
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown li:last-child {
+    border-bottom: none;
+}
+
+.dropdown li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+/* Hover effect on dropdown items */
+.dropdown li:hover a {
+    color: #065c12;
+    font-weight: bold;
+}
+
+/* Show dropdown when card is hovered */
+.feature-list li:hover .dropdown {
+    max-height: 300px;
+    opacity: 1;
+    padding: 10px 0;
+}
+
+/* Pointer cursor on title */
+.dropdown-btn {
+    cursor: pointer;
+}
+
+/* List container */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Main list items */
+.feature-list > li {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover card animation */
+.feature-list > li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.22);
+}
+
+/* Heading link */
+.feature-list h2 a {
+    text-decoration: none;
+    color: #0b7a19;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+    list-style: none;
+    padding: 0;
+    margin-top: 12px;
+    background: #f5fff5;
+    border-radius: 10px;
+    overflow: hidden;
+
+    /* Hide by default */
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.4s ease;
+}
+
+/* Show dropdown on hover */
+.feature-list > li:hover .dropdown {
+    max-height: 300px;
+    opacity: 1;
+    padding: 10px 0;
+}
+
+/* Dropdown items */
+.dropdown li {
+    margin: 0;
+    padding: 8px 20px;
+}
+
+.dropdown li a {
+    color: #0b7a19;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease, padding-left 0.3s ease;
+}
+
+/* Hover inside dropdown */
+.dropdown li:hover a {
+    color: #065c12;
+    padding-left: 10px;
+}
+
+/* Dropdown arrow rotate */
+.feature-list > li:hover h2 a::after {
+    content: "▲";
+    margin-left: 8px;
+    font-size: 16px;
+}
+
+/* Default arrow */
+.feature-list h2 a::after {
+    content: "▼";
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
